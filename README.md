@@ -27,6 +27,6 @@ A simple and responsive web app that generates color schemes using [The Color AP
 To run it locally:
 
 ```bash
-git clone https://github.com/your-username/color-scheme-generator.git
+git clone https://github.com/ouassimaelyakoubi/color-scheme-generator.git
 cd color-scheme-generator
 open index.html
