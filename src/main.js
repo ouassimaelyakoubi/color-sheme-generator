@@ -18,12 +18,12 @@ document.getElementById("get-btn").addEventListener("click", function () {
         const hex = color.hex.value;
 
         schemesHTML += `
-          <button class="h-[400px] shrink basis-20 md:shrink md:basis-40" id="${hex}" style="background-color: ${hex}">
+          <button class="btn-color" id="${hex}" style="background-color: ${hex}">
           </button>
         `;
 
         hexesHTML += `
-          <button class="h-fit shrink basis-20 md:shrink md:basis-40 p-1 md:p-4 text-black" id="b${hex}">${hex}</button>
+          <button class="btn-hex" id="b${hex}">${hex}</button>
         `;
       });
 

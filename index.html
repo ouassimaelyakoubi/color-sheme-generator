@@ -10,14 +10,14 @@
     <title>Color Scheme Generator</title>
   </head>
   <body class="bg-white font-[Inter] text-gray-900">
-    <main class="flex flex-col items-center justify-center h-screen w-full p-4 sm:p-1 overflow-hidden">
-      <div class="flex flex-col gap-4 items-center border border-gray-300 rounded-lg  w-full max-w-2xl shadow-sm">
+    <main class="">
+      <div class="color-sheme-container">
         
         <!-- Controls -->
-        <div class="flex flex-col sm:flex-row sm:items-center-safe gap-4 w-full px-4 pt-4 sm:px-2">
-          <input type="color" id="colorInput" class="w-full sm:w-16 h-12 border" />
+        <div class="color-sheme-header">
+          <input type="color" id="colorInput" class="color-input" />
 
-          <select id="schemeModeSelect" class="flex-1 p-2 border border-gray-300 rounded">
+          <select id="schemeModeSelect" class="color-sheme-select">
             <option value="monochrome">Monochrome</option>
             <option value="monochrome-dark">Monochrome-dark</option>
             <option value="monochrome-light">Monochrome-light</option>
@@ -27,18 +27,18 @@
             <option value="triad">Triad</option>
           </select>
 
-          <button id="get-btn" class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100">
+          <button id="get-btn" class="get-btn">
             Get color scheme
           </button>
         </div>
 
         <!-- Color blocks -->
-        <div id="color-shemes" class="flex justify-center  w-full">
+        <div id="color-shemes" class="color-shemes">
           <!-- Buttons will be injected here -->
         </div>
 
         <!-- Hex values -->
-        <div id="color-hex" class="flex justify-center w-full  box-border">
+        <div id="color-hex" class="color-hex">
           <!-- Buttons will be injected here -->
         </div>
       </div>
@@ -46,7 +46,7 @@
       <!-- Toast -->
       <div
         id="toast"
-        class="border border-green-100 text-green-700 text-sm bg-white rounded px-3 py-1 shadow-md absolute hidden z-50"
+        class="toast"
         style="pointer-events: none;"
       >
         ✔ Copied
