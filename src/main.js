@@ -1,6 +1,7 @@
 const inputColor = document.getElementById("colorInput");
 const colorSchemeMode = document.getElementById("schemeModeSelect");
 
+
 document.getElementById("get-btn").addEventListener("click", function () {
   const color = inputColor.value;
   const schemeMode = colorSchemeMode.value;
@@ -52,10 +53,13 @@ document.getElementById("get-btn").addEventListener("click", function () {
           });
         }
       });
+      document.getElementById("color-shemes").style.display = "flex";
+
     })
     .catch((error) => {
       console.error("Error fetching color scheme:", error);
     });
+
 });
 
 
