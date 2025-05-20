@@ -1,8 +1,10 @@
-@import "tailwindcss";
 body {
   font-family: 'Inter', sans-serif;
+  margin: 0;
 }
-
+* {
+  box-sizing: border-box;
+}
 
 .color-sheme-container {
   display: flex;
@@ -19,7 +21,7 @@ body {
   margin: 0 auto;
   width: 100vw;
   padding: 1em;
-  gap:1em
+  gap:1em;
 }
 
 .color-input {
@@ -68,11 +70,16 @@ input[type="color"] {
   border-radius: 4px;
   flex:1;
 }
+.color-sheme-select, .get-btn, .btn-hex{
+  font-family: inherit;
+}
+
 
 .get-btn {
   padding: 0.5em 1em;
   border:  1px solid #D1D5DB;
   border-radius: 4px;
+  background-color: white;
 }
 
 .get-btn:hover {
@@ -98,11 +105,14 @@ input[type="color"] {
   font-size: 0.7em;
   box-sizing: border-box;
   overflow: hidden;
+  background-color: white;
+
 }
 
 .btn-color, .btn-hex{
   padding: 0em;
   width: 100vw;
+  border: none;
   
 }
 
