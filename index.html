@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <title>Color Scheme Generator</title>
+  </head>
+  <body class="bg-white font-[Inter] text-gray-900">
+    <main class="flex flex-col items-center justify-center h-screen w-full p-4 sm:p-1 overflow-hidden">
+      <div class="flex flex-col gap-4 items-center border border-gray-300 rounded-lg  w-full max-w-2xl shadow-sm">
+        
+        <!-- Controls -->
+        <div class="flex flex-col sm:flex-row sm:items-center-safe gap-4 w-full px-4 pt-4 sm:px-2">
+          <input type="color" id="colorInput" class="w-full sm:w-16 h-12 border" />
+
+          <select id="schemeModeSelect" class="flex-1 p-2 border border-gray-300 rounded">
+            <option value="monochrome">Monochrome</option>
+            <option value="monochrome-dark">Monochrome-dark</option>
+            <option value="monochrome-light">Monochrome-light</option>
+            <option value="analogic">Analogic</option>
+            <option value="complement">Complement</option>
+            <option value="analogic-complement">Analogic-complement</option>
+            <option value="triad">Triad</option>
+          </select>
+
+          <button id="get-btn" class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100">
+            Get color scheme
+          </button>
+        </div>
+
+        <!-- Color blocks -->
+        <div id="color-shemes" class="flex justify-center  w-full">
+          <!-- Buttons will be injected here -->
+        </div>
+
+        <!-- Hex values -->
+        <div id="color-hex" class="flex justify-center w-full  box-border">
+          <!-- Buttons will be injected here -->
+        </div>
+      </div>
+
+      <!-- Toast -->
+      <div
+        id="toast"
+        class="border border-green-100 text-green-700 text-sm bg-white rounded px-3 py-1 shadow-md absolute hidden z-50"
+        style="pointer-events: none;"
+      >
+        ✔ Copied
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
